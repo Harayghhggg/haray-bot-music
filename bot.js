@@ -291,12 +291,6 @@ client.on('ready', () => { //code bot not leave room voice //Bot Is Online
 
 
 
-client.on("ready", () => { // كود رينبو
-        function lol() {
-                  client.guilds.get('509138287022047232').roles.find("name", "rinbow").setColor("RANDOM");
-        };
-        setInterval(lol, 5);
-});
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
