@@ -60,7 +60,7 @@ client.on('message', async msg => {
 			        .setDescription(`**الرجآء من حضرتك إختيآر رقم المقطع** :
 ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 
-					.setFooter("FireBot")
+					.setFooter("@! FS | HARAY#8266")
 					msg.channel.sendEmbed(embed1).then(message =>{message.delete(20000)})
 					
 					try {
@@ -219,7 +219,7 @@ ${prefix}skip - لتجآوز الأغنية الحآلية
 ${prefix}pause - إيقآف الأغنية مؤقتا
 ${prefix}resume - لموآصلة الإغنية بعد إيقآفهآ مؤقتا
 ${prefix}vol - لتغيير درجة الصوت 100 - 0』
-${prefix}stop - لإخرآج البوت من الروم
+${prefix}stop -  لتوقف البوت عن تشغيل الاغاني
 ${prefix}np - لمعرفة الأغنية المشغلة حآليا
 ${prefix}queue - لمعرفة قآئمة التشغيل
 **
@@ -235,8 +235,7 @@ ${prefix}queue - لمعرفة قآئمة التشغيل
 
     message.author.sendEmbed(embed).then(msg => {
 
-        msg.react('◀').then( r => {
-            msg.react('▶')
+        
 
 
         const backwardsFilter = (reaction, user) => reaction.emoji.name === '◀' && user.id === message.author.id;
@@ -294,7 +293,7 @@ client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
       
-  if (message.content.startsWith(adminprefix + 'pl')) {
+  if (message.content.startsWith(adminprefix + 'ply')) {
     client.user.setGame(argresult);
       message.channel.send(`**Status You   ${argresult}**`)
   } else 
